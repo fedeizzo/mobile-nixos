@@ -38,6 +38,7 @@ mobile-nixos.kernel-builder {
     ./patches/kukui.enable-ite.patch
     ./patches/mt8183-cadmium-improved-kukui.gpu.patch
     ./patches/mt8183-kukui-disable-unsupported-thermal-zones.patch
+    ./patches/mt8183-kukui-jacuzzi-fennel14-rt1015p-sound.patch
   ];
 
   isModular = true;
