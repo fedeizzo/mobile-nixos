@@ -1,5 +1,4 @@
-{
-  mobile-nixos
+{ mobile-nixos
 , fetchFromGitHub
 , fetchpatch
 , ...
@@ -34,6 +33,12 @@ mobile-nixos.kernel-builder {
       url = "https://github.com/torvalds/linux/commit/4cec85ca5a098fca3d49bda9976bccaca16a8876.patch";
       sha256 = "sha256-V5d1OSJro82LIWrlJ74m5xxF26dtEe7HZmoFgUX/HBc=";
     })
+    ./patches/gru.0001-drm-bridge-analogix_dp-Don-t-return-EBUSY-when-msg-s.patch
+    ./patches/gru.0002-drm-rockchip-Only-wait-for-panel-ACK-on-PSR-entry.patch
+    ./patches/kukui.enable-ite.patch
+    ./patches/mt8183-cadmium-improved-kukui.gpu.patch
+    ./patches/mt8183-kukui-disable-unsupported-thermal-zones.patch
+    ./patches/mt8183-kukui-jacuzzi-fennel14-rt1015p-sound.patch
   ];
 
   isModular = true;
